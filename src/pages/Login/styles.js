@@ -8,7 +8,7 @@ import styled from 'styled-components'
 //   height: 100vh;
 //   min-width: 100vw;
 //   /* background-color: #120b81; #005486,#32cd32  */
-//   background-image: -webkit-linear-gradient(#120b81, #008b8b, #006400);
+//   background-image: -webkit-linear-gradient(#120b81, #008b8b, #006400 #9fd7e9);
 
 // `
 export const Form = styled.div`
@@ -18,26 +18,26 @@ export const Form = styled.div`
   align-items: center;
   align-content: center;
   justify-content: left;
-  background-color: #111;
+  background-color: ghostwhite;
   width: 100%;
   max-width: 400px;
   height: 100vh;
   gap: 30px 0px;
 
 h1 {
-  color: white;
+  color: black;
   font-size: 29px;
-  font-weight: lighter;
+  font-weight: bold;
 }
 
 p {
-  color: white;
+  color: black;
   font-size: 17px;
   font-weight: bold;
 }
 
 a {
-  color: white;
+  color: black;
   font-size: 14px;
   font-weight: bold;
 
