@@ -13,7 +13,7 @@ import styled from 'styled-components'
 // `
 export const Form = styled.div`
   display: flex;
-  padding: 3rem;
+  padding: 1rem;
   flex-direction: column;
   align-items: center;
   align-content: center;
