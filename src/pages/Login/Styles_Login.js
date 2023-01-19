@@ -25,22 +25,16 @@ export const Form = styled.div`
   gap: 30px 0px;
 
 h1 {
-  color: black;
+  color: #2c2c2c;
   font-size: 29px;
   font-weight: bold;
 }
 
 p {
-  color: black;
-  font-size: 17px;
+  color: #2c2c2c;
+  font-size: 15px;
   font-weight: bold;
 }
 
-a {
-  color: black;
-  font-size: 14px;
-  font-weight: bold;
-
-}
 `
 
