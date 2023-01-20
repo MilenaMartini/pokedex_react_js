@@ -5,15 +5,12 @@ import "../../Styles/Styles.css"
 import Image from '../../Components/Images/logooriginalpokemon.png'
 import Input from '../../Components/Input/Input'
 import Btn from '../../Components/Button/Btn_Login'
-// import UserService from '../../Service/UserService'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 //{} serve para mostra que você está importando algo de dentro do arquivo
 
 
 const Login = () => {
   const [loading, setLoading] = useState()
-  const [form, setForm] = useState([])
-  //form é a variavel
 
 
     const handleSubmit = async (event) => {
@@ -21,7 +18,6 @@ const Login = () => {
       setLoading (true)
       //carregando
       alert ('login')
-      // setLoading(false)
       //quando carrega habilita o botão de novo
       }
     catch(err){
