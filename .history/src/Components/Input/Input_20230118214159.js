@@ -1,5 +1,5 @@
-import React from 'react'
-import { InputCustomzado } from './Styles_Input'
+import React from 'react';
+import { InputCustomzado } from './Styles_Input';
 
 
 const Input = () => {
