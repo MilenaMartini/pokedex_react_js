@@ -26,7 +26,7 @@ a {
 }
 
 p {
-  color: gray;
+  color: darkgray;
   font-size: 15px;
   font-weight: bold;
 }

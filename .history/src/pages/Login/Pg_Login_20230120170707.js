@@ -18,7 +18,7 @@ const Login = () => {
 
    const[user, setUser] = useState({
     email: 'email@email.com',
-    password: '123456',
+    password: '1234',
    });
 
    let schema = yup.object().shape({
@@ -80,8 +80,7 @@ const Login = () => {
         onClick={validateData}
         />
        <div >
-       <a>Não possui uma conta?</a>
-        <p> email: email@email.com senha:123456</p>
+        <p>Não possui uma conta?</p>
        </div>
       </Form>
     </section>

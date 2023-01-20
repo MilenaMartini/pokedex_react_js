@@ -17,13 +17,13 @@ const Login = () => {
 
 
    const[user, setUser] = useState({
-    email: 'email@email.com',
-    password: '123456',
+    email: '',
+    password: ''
    });
 
    let schema = yup.object().shape({
-    email: yup.string('Digite seu email').email('Coloque um email valido').required('Item necessário'),
-    password: yup.string('Digite uma senha').required('É necessário colocar a senha'),
+    email: yup.string('precisa ser string').email('Email').required('É necessário'),
+    password: yup.string('string').required('É necessário'),
    });
 
   const [loading, setLoading] = useState()
@@ -44,13 +44,13 @@ const Login = () => {
   </Routes>
   </BrowserRouter>
 
-  const validateData = async () => {
+  const validateData = () => {
     try{
-      await schema.validate({
+      const teste = schema.validate({
         email: user.email,
         password: user.password
       });
-      handleSubmit()
+      console.log(teste)
     } catch (err) {
       alert(err)
     }
@@ -80,8 +80,7 @@ const Login = () => {
         onClick={validateData}
         />
        <div >
-       <a>Não possui uma conta?</a>
-        <p> email: email@email.com senha:123456</p>
+        <p>Não possui uma conta?</p>
        </div>
       </Form>
     </section>

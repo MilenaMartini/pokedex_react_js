@@ -7,5 +7,3 @@ const Pg_Poke = () => {
 }
 
 export default Pg_Poke;
-//Pg_Poke ou Poke
-//caso de problema

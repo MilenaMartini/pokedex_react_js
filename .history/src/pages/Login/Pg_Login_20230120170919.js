@@ -80,8 +80,8 @@ const Login = () => {
         onClick={validateData}
         />
        <div >
-       <a>Não possui uma conta?</a>
         <p> email: email@email.com senha:123456</p>
+        <a>Não possui uma conta?</a>
        </div>
       </Form>
     </section>

@@ -20,13 +20,13 @@ h1 {
 }
 
 a {
-  color: #2c2c2c;
+  color: darkgray;
   font-size: 15px;
   font-weight: bold;
 }
 
 p {
-  color: gray;
+  color: #2c2c2c;
   font-size: 15px;
   font-weight: bold;
 }

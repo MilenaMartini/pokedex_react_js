@@ -12,18 +12,18 @@ import * as yup from 'yup';
 
 
 
-
 const Login = () => {
 
 
    const[user, setUser] = useState({
-    email: 'email@email.com',
-    password: '123456',
+    email: '',
+    password: ''
    });
 
    let schema = yup.object().shape({
-    email: yup.string('Digite seu email').email('Coloque um email valido').required('Item necessário'),
-    password: yup.string('Digite uma senha').required('É necessário colocar a senha'),
+
+    email: yup.string().email().required(),
+    password: yup.number().required(),
    });
 
   const [loading, setLoading] = useState()
@@ -36,7 +36,6 @@ const Login = () => {
       alert('Algo deu errado :c' + err)
     }
    }
-
 <BrowserRouter>
   <Routes>
     <Route path='/' element={<Login />} />
@@ -44,18 +43,7 @@ const Login = () => {
   </Routes>
   </BrowserRouter>
 
-  const validateData = async () => {
-    try{
-      await schema.validate({
-        email: user.email,
-        password: user.password
-      });
-      handleSubmit()
-    } catch (err) {
-      alert(err)
-    }
-  }
-
+  const (handleSubmit) = UseForm ({ resolver: yupResolver(validationSchema)});
   return (
     <section className='Main-Container'>
       <Form>
@@ -77,11 +65,10 @@ const Login = () => {
         <Btn
         type='submit'
         text='Entrar'
-        onClick={validateData}
+        onClick={handleSubmit}
         />
        <div >
-       <a>Não possui uma conta?</a>
-        <p> email: email@email.com senha:123456</p>
+        <p>Não possui uma conta?</p>
        </div>
       </Form>
     </section>
