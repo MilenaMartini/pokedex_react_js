@@ -1,44 +1,39 @@
-import React, {useState} from 'react'
-import { Form } from './Styles_Login';
-import { validarEmail, validarSenha } from '../../Utils/Validadores';
+import React, {useState, useEffect} from 'react'
+import { Form } from './Styles_Login'
+import Poke from '../Pg_Pokedex/Pg_Poke'
 import "../../Styles/Styles.css"
 import Image from '../../Components/Images/logooriginalpokemon.png'
-import Input from '../../Components/Input/Input';
+import Input from '../../Components/Input/Input'
 import Btn from '../../Components/Button/Btn_Login'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 //{} serve para mostra que você está importando algo de dentro do arquivo
 
 const Login = () => {
-  const [loanding, setLoanding] = useState()
+  const [loading, setLoading] = useState()
   const [form, setForm] = useState([])
   //form é a variavel
 
-  const handleSubmit = async (event) => {
 
     const handleSubmit = async (event) => {
     try {
-      setLoanding (true)
-      //o usuário aperto e ta carregando
-      alert('Login')
-      setLoanding(false)
+      setLoading (true)
+      //carregando
+      alert ('login')
+      // setLoading(false)
       //quando carrega habilita o botão de novo
       }
     catch(err){
       alert('Algo deu errado :c' + err)
     }
    }
-  }
 
-  const handleChange = (event) => {
-    setForm({...form, [event.target.name]: event.target.value})
-  }
-  // capta o nome e o valor, evento do input
 
-   const validadorInput = () => {
-     return validarEmail(form.email) && validarSenha(form.password)
-   }
-
-   console.log('Form está válido?', validadorInput())
-
+<BrowserRouter>
+  <Routes>
+    <Route path='/' element={<Login />} />
+    <Route path='/pokedex' element={<Poke />} />
+  </Routes>
+  </BrowserRouter>
   return (
     <section className='Main-Container'>
       <Form>
@@ -47,21 +42,18 @@ const Login = () => {
        <Input
        name='email'
        placeholder='Digite o seu e-mail'
-       anChage={handleChange}
        type='email'
       //  componente personalizado
        />
         <Input
         name='password'
         placeholder='Digite a sua senha'
-        anChage={handleChange}
         type='password'
         />
         <Btn
         type='submit'
         text='Entrar'
         onClick={handleSubmit}
-        disabled={loanding === true || !validadorInput()}
         />
        <div >
         <p>Não possui uma conta?</p>
@@ -70,5 +62,6 @@ const Login = () => {
     </section>
    )
 }
+
 
 export default Login;

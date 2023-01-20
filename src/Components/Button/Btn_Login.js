@@ -1,5 +1,5 @@
-import React from 'react';
-import { BtnCustomizado } from './Styles_Btn_Login';
+import React from 'react'
+import { BtnCustomizado } from './Styles_Btn_Login'
 
 
 const Btn = ({
@@ -8,15 +8,12 @@ const Btn = ({
   type,
   text,
   onClick,
-  disabled,
 }) => {
   return (
     <BtnCustomizado
       type={type}
       text={text}
-      onClick={onClick}
-      disabled={disabled}
-      >
+      onClick={onClick}>
         {text}
       </BtnCustomizado>
   );
