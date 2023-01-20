@@ -5,10 +5,12 @@ import "../../Styles/Styles.css"
 import Image from '../../Components/Images/logooriginalpokemon.png'
 import Input from '../../Components/Input/Input'
 import Btn from '../../Components/Button/Btn_Login'
-// import UserService from '../../Service/UserService'
+import UserService from '../../Service/UserService'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import UserService from '../../Service/UserService'
 //{} serve para mostra que você está importando algo de dentro do arquivo
 
+const userService = new UserService()
 
 const Login = () => {
   const [loading, setLoading] = useState()
@@ -20,6 +22,7 @@ const Login = () => {
     try {
       setLoading (true)
       //carregando
+      const response = await UserService.Login(form)
       alert ('login')
       // setLoading(false)
       //quando carrega habilita o botão de novo
