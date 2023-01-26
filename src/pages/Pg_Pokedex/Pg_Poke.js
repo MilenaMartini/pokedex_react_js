@@ -4,6 +4,8 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import PokemonCard from '../../Components/PokemonCard/Pk_Card'
+import { Style } from '@mui/icons-material';
+import { grey } from '@mui/material/colors';
 
 export const Pg_Poke = () => {
   const [pokemons, setPokemons] = useState([])
@@ -21,10 +23,10 @@ export const Pg_Poke = () => {
     };
 
     return (
-    <div>
+    <div  >
       <Navbar />
-      <Container maxWidth="false">
-       <Grid container spacing={2}>
+      <Container maxWidth="false" >
+       <Grid container spacing={2} colorspa  >
           {pokemons.map((pokemon, key) => (
             <Grid item xs={2} key={key}>
             <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default}/>
