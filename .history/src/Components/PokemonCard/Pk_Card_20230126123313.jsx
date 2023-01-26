@@ -10,13 +10,6 @@ import EditIcon from '@mui/icons-material/Edit';
 import { createTheme } from '@mui/material/styles';
 
 export default function PokemonCard({ name, image, types }) {
-
-  const typeHandler = () => {
-      if(types[1]){
-        return types[0].type.name+"|"+types[1].type.name;
-      }
-      return types[0].type.name;
-  };
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia component="img" xs={1} image={image} alt="pokemon"/>
@@ -24,8 +17,8 @@ export default function PokemonCard({ name, image, types }) {
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
-        <Typography gutterBottom variant="caption" component="div">
-          {typeHandler()}
+        <Typography gutterBottom variant="h6" component="div">
+          {types}
         </Typography>
       </CardContent>
       <CardActions >

@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { createTheme } from '@mui/material/styles';
+import { Box } from '@mui/system';
 
 export default function PokemonCard({ name, image, types }) {
 
@@ -21,12 +22,14 @@ export default function PokemonCard({ name, image, types }) {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia component="img" xs={1} image={image} alt="pokemon"/>
       <CardContent>
+        <Box display="flex" justfyContent="space-between" alignItems="center" >
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
         <Typography gutterBottom variant="caption" component="div">
           {typeHandler()}
         </Typography>
+        </Box>
       </CardContent>
       <CardActions >
       <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>

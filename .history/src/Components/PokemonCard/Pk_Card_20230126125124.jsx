@@ -21,12 +21,14 @@ export default function PokemonCard({ name, image, types }) {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia component="img" xs={1} image={image} alt="pokemon"/>
       <CardContent>
+        <Box display="flex" justfyContent="space-between" >
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
         <Typography gutterBottom variant="caption" component="div">
           {typeHandler()}
         </Typography>
+        </Box>
       </CardContent>
       <CardActions >
       <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>

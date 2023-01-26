@@ -24,7 +24,7 @@ export default function PokemonCard({ name, image, types }) {
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
-        <Typography gutterBottom variant="caption" component="div">
+        <Typography gutterBottom variant="h6" component="div">
           {typeHandler()}
         </Typography>
       </CardContent>
