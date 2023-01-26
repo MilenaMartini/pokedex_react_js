@@ -13,21 +13,22 @@ export const Pg_Poke = () => {
 
     const getPokemons = () => {
       var endpoints = []
-      for( var i = 1; i<50; i++){
-        // 152
-        endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
+      for( var i = 0; i++; i<500){
+        endpoints.push{}
       }
-      var response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
+    axios.get("https://pokeapi.co/api/v2/pokemon?limit=500")
+      .then((res) => setPokemons(res.data.results))
+      .catch((err) => console.log(err));
     };
 
     return (
     <div>
       <Navbar />
       <Container maxWidth="false">
-       <Grid container spacing={2}>
+       <Grid container>
           {pokemons.map((pokemon, key) => (
-            <Grid item xs={2} key={key}>
-            <PokemonCard name={pokemon.data.name} image={pokemon.data.sprites.front_default}/>
+            <Grid item xs={3} key={key}>
+            <PokemonCard name={pokemon.name} />
           </Grid>
           ))}
 
