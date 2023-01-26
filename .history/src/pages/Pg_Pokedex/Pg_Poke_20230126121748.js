@@ -15,7 +15,7 @@ export const Pg_Poke = () => {
 
     const getPokemons = () => {
       var endpoints = []
-      for( var i = 1; i<152; i++){
+      for( var i = 1; i<50; i++){
         // 152
         endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
       }

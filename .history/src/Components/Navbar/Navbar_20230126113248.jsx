@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import PkLogo from '../Images/Pokédex_logo.png';
+// import ts from '../Images/Pokédex_logo.png';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -53,23 +53,22 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Navbar({ pokemonFilter }) {
+export default function Navbar() {
   return (
     <Box sx={{ flexGrow: 1, marginBottom:"2em" }}>
       {/* 1 em equivale a dez pixels */}
-      <AppBar position="static" sx={{background:"DarkBlue"}}>
+      <AppBar position="static" sx={{background:"red"}}>
         <Toolbar>
-          <Box display="flex" justifyContent="space-between" width="100%">
-            <Box component="img" src={PkLogo} height="3em"/>
-          <Search onChange={(e) => pokemonFilter(e.target.value)}>
+            <Box component="img" src="'../Images/Pokédex_logo.png'"/>
+          <Search>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase
-              placeholder="Pesquisando..."
-              inputProps={{ 'aria-label': 'search' }} />
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
           </Search>
-          </Box>
         </Toolbar>
       </AppBar>
     </Box>

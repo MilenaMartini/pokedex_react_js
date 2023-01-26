@@ -17,10 +17,13 @@ export default function PokemonCard({ name, image }) {
         <Typography gutterBottom variant="h6" component="div">
           {name}
         </Typography>
+        {/* <Typography variant="body2" color="text.secondary">
+          caso precise de algum texto
+        </Typography> */}
       </CardContent>
-      <CardActions >
-      <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>
-      <Button size="small" color="inherit" variant='outlined'><EditIcon /></Button>
+      <CardActions>
+      <Button size="small" color='inherit'><DeleteIcon /></Button>
+      <Button size="small" color="secondary"><EditIcon /></Button>
       </CardActions>
     </Card>
   );

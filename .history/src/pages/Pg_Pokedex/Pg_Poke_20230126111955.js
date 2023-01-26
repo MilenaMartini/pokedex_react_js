@@ -15,30 +15,17 @@ export const Pg_Poke = () => {
 
     const getPokemons = () => {
       var endpoints = []
-      for( var i = 1; i<152; i++){
+      for( var i = 1; i<50; i++){
         // 152
         endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
       }
-     axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
-    };
-
-    const pokemonFilter = (name) => {
-      var filteredPokemons = [];
-      if (name === "") {
-        getPokemons();
-      }
-      for (var i in pokemons) {
-        if(pokemons[i].data.name.includes(name)) {
-          filteredPokemons.push(pokemons[i]);
-        }
-      }
-      setPokemons(filteredPokemons);
+      var response = axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
     return (
     <div >
-      <Navbar pokemonFilter={pokemonFilter}/>
-      <Container maxWidth="false" >
+      <Navbar />
+      <Container maxWidth="false" sx={{background:"alice-blue"}}>
        <Grid container spacing={2} colorspa  >
           {pokemons.map((pokemon, key) => (
             <Grid item xs={2} key={key}>

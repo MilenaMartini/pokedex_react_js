@@ -18,9 +18,9 @@ export default function PokemonCard({ name, image }) {
           {name}
         </Typography>
       </CardContent>
-      <CardActions >
-      <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>
-      <Button size="small" color="inherit" variant='outlined'><EditIcon /></Button>
+      <CardActions disableSpacing>
+      <Button size="small" color='inherit' variant='outlined'><DeleteIcon /> Delete</Button>
+      <Button size="small" color="inherit"><EditIcon /> Edit</Button>
       </CardActions>
     </Card>
   );

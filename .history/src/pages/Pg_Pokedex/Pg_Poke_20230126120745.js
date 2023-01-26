@@ -15,7 +15,7 @@ export const Pg_Poke = () => {
 
     const getPokemons = () => {
       var endpoints = []
-      for( var i = 1; i<152; i++){
+      for( var i = 1; i<50; i++){
         // 152
         endpoints.push(`https://pokeapi.co/api/v2/pokemon/${i}/`);
       }
@@ -24,16 +24,14 @@ export const Pg_Poke = () => {
 
     const pokemonFilter = (name) => {
       var filteredPokemons = [];
-      if (name === "") {
-        getPokemons();
-      }
-      for (var i in pokemons) {
-        if(pokemons[i].data.name.includes(name)) {
-          filteredPokemons.push(pokemons[i]);
-        }
-      }
-      setPokemons(filteredPokemons);
-    };
+      console.log(name)
+    //   for (var i in pokemons) {
+    //     if(pokemons[i].data.name.includes(name)) {
+    //       filteredPokemons.push(pokemons[i]);
+    //     }
+    //   }
+    //   setPokemons(filteredPokemons);
+     };
 
     return (
     <div >

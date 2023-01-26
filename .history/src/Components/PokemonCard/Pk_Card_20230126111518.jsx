@@ -18,7 +18,7 @@ export default function PokemonCard({ name, image }) {
           {name}
         </Typography>
       </CardContent>
-      <CardActions >
+      <CardActions sx={{alignContent: "center"}}>
       <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>
       <Button size="small" color="inherit" variant='outlined'><EditIcon /></Button>
       </CardActions>
