@@ -21,9 +21,9 @@ export const Pg_Poke = () => {
      axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
-    const pokemonFilter = (id, name) => {
+    const pokemonFilter = (name) => {
       var filteredPokemons = [];
-      if (id, name === "") {
+      if (name === "") {
         getPokemons();
       }
       for (var i in pokemons) {
@@ -33,6 +33,15 @@ export const Pg_Poke = () => {
       }
       setPokemons(filteredPokemons);
     }
+
+    useEffect(() => {
+      if (
+        getPokemons?.state === "hasValue" &&
+        getPokemons?.contents !== undefined
+      ) {
+        setPokemons(getPokemons.contents);
+      }
+    }, []);
 
     return (
     <div >

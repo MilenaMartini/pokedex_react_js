@@ -18,6 +18,11 @@ export default function PokemonCard({ id, name, image, types }) {
       return types[0].type.name;
   };
 
+  <BrowserRouter>
+  <Routes>
+    <Route path="/pokemon" element={<InfoPk/>} />
+  </Routes>
+  </BrowserRouter>
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -32,7 +37,7 @@ export default function PokemonCard({ id, name, image, types }) {
       </CardContent>
       <CardActions >
       <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>
-      <Button size="small" color="inherit" variant='outlined'><EditIcon /></Button>
+      <Button size="small" color="inherit" variant='outlined' onClick={window.open('pokemon', '_self')}><EditIcon /></Button>
       </CardActions>
     </Card>
   );

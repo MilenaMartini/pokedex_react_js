@@ -18,6 +18,20 @@ export default function PokemonCard({ id, name, image, types }) {
       return types[0].type.name;
   };
 
+  <BrowserRouter>
+  <Routes>
+    <Route path="/pokemon" element={<InfoPk/>} />
+  </Routes>
+  </BrowserRouter>
+
+const info = async (event) => {
+  try {
+    window.open('pokedex', '_self')
+    }
+  catch(err){
+    alert('Algo deu errado :c' + err)
+  }
+ }
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -32,7 +46,7 @@ export default function PokemonCard({ id, name, image, types }) {
       </CardContent>
       <CardActions >
       <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>
-      <Button size="small" color="inherit" variant='outlined'><EditIcon /></Button>
+      <Button size="small" color="inherit" variant='outlined'><EditIcon /> onClick={info}</Button>
       </CardActions>
     </Card>
   );

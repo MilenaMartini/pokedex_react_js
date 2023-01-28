@@ -12,6 +12,7 @@ const Routering = () => {
       <Routes>
         <Route path="/" element={<Login/>} />
         <Route path="/pokedex" element={<Poke/>} />
+        <Route path="/pokedex" element={<InfoPk/>} />
       </Routes>
     </Router>
    );

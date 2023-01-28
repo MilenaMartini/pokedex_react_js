@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Poke from '../Pg_Pokedex/Pg_Poke';
 import InfoPk from '../../pages/Pg_Pokedex/Pg_infor_extras';
 export default function PokemonCard({ id, name, image, types }) {
 
@@ -18,6 +19,12 @@ export default function PokemonCard({ id, name, image, types }) {
       return types[0].type.name;
   };
 
+  <BrowserRouter>
+  <Routes>
+    <Route path='/pokedex' element={<Poke />} />
+    <Route path="/pokemon" element={<InfoPk/>} />
+  </Routes>
+  </BrowserRouter>
 
   return (
     <Card sx={{ maxWidth: 345 }}>
@@ -32,7 +39,7 @@ export default function PokemonCard({ id, name, image, types }) {
       </CardContent>
       <CardActions >
       <Button size="small" color='inherit' variant='outlined'><DeleteIcon /></Button>
-      <Button size="small" color="inherit" variant='outlined'><EditIcon /></Button>
+      <Button size="small" color="inherit" variant='outlined' onClick={InfoPk}><EditIcon /></Button>
       </CardActions>
     </Card>
   );

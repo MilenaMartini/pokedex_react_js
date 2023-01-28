@@ -27,6 +27,11 @@ export const Pg_Poke = () => {
         getPokemons();
       }
       for (var i in pokemons) {
+        if(pokemons.id.data) {
+          filteredPokemons.push(pokemons[i]);
+        }
+      }
+      for (var i in pokemons) {
         if(pokemons[i].data.name.includes(name)) {
           filteredPokemons.push(pokemons[i]);
         }

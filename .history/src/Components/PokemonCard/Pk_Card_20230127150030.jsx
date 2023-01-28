@@ -7,8 +7,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import InfoPk from '../../pages/Pg_Pokedex/Pg_infor_extras';
 export default function PokemonCard({ id, name, image, types }) {
 
   const typeHandler = () => {
@@ -17,8 +15,6 @@ export default function PokemonCard({ id, name, image, types }) {
       }
       return types[0].type.name;
   };
-
-
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia component="img" xs={1} image={image} alt="pokemon"/>

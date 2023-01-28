@@ -21,13 +21,13 @@ export const Pg_Poke = () => {
      axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
-    const pokemonFilter = (id, name) => {
+    const pokemonFilter = (number) => {
       var filteredPokemons = [];
-      if (id, name === "") {
+      if (number === "") {
         getPokemons();
       }
       for (var i in pokemons) {
-        if(pokemons[i].data.name.includes(name)) {
+        if(pokemons[i].data.number.includes(number)) {
           filteredPokemons.push(pokemons[i]);
         }
       }
@@ -42,7 +42,7 @@ export const Pg_Poke = () => {
           {pokemons.length === 0 ? <Skeletons/> :
           pokemons.map((pokemon, key) => (
             <Grid item xs={12} sm={6} md={4} lg={2} key={key}>
-            <PokemonCard id={pokemon.data.id} name={pokemon.data.name} image={pokemon.data.sprites.front_default} types={pokemon.data.types}/>
+            <PokemonCard id={pokemon.data.number} name={pokemon.data.name} image={pokemon.data.sprites.front_default} types={pokemon.data.types}/>
           </Grid>
           ))
           }

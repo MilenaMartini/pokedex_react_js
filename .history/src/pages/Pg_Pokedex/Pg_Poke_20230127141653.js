@@ -21,9 +21,9 @@ export const Pg_Poke = () => {
      axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
-    const pokemonFilter = (id, name) => {
+    const pokemonFilter = (name, id) => {
       var filteredPokemons = [];
-      if (id, name === "") {
+      if (name === "") {
         getPokemons();
       }
       for (var i in pokemons) {
@@ -31,8 +31,17 @@ export const Pg_Poke = () => {
           filteredPokemons.push(pokemons[i]);
         }
       }
+
+      if (id === "") {
+        getPokemons();
+      }
+      for (var ii in pokemons) {
+        if(pokemons[ii].data.id.includes(id)) {
+          filteredPokemons.push(pokemons[ii]);
+        }
+      }
       setPokemons(filteredPokemons);
-    }
+    };
 
     return (
     <div >
