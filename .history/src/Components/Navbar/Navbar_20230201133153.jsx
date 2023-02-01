@@ -8,16 +8,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import PkLogo from '../Images/Pokédex_logo.png';
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
-import { Link } from '@mui/material';
-
-const newpk = async (event) => {
-  try {
-    window.open('pokedex/new/:id', '_self')
-    }
-  catch(err){
-    alert('Algo deu errado :c' + err)
-  }
- }
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -62,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Navbar({ pokemonFilter, id }) {
+export default function Navbar({ pokemonFilter }) {
   return (
     <Box sx={{ flexGrow: 1, marginBottom:"2em" }}>
       {/* 1 em equivale a dez pixels */}
@@ -78,14 +68,11 @@ export default function Navbar({ pokemonFilter, id }) {
               placeholder="Pesquisando..."
               inputProps={{ 'aria-label': 'search' }} />
           </Search>
-          </Box>
-          <Link to={`/Novo_Pokemon/${id}`}>
-          <Button size="small" color="inherit" onClick={newpk}> <AddIcon/> </Button>
-          </Link>
+          <Button size="small" color="inherit" variant='outlined'><AddIcon/></Button>
 
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
   );
 }
-

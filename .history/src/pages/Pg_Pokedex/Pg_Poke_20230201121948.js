@@ -28,7 +28,9 @@ export const Pg_Poke = () => {
       }
       for (var i in pokemons) {
         if(pokemons[i].data.name.includes(name)) {
-          filteredPokemons.push(pokemons[i])
+          filteredPokemons.push(pokemons[i]);
+        } else {
+          <p>Pokemon não encontrado</p>
         }
       }
       setPokemons(filteredPokemons);

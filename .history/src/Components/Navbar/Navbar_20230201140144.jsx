@@ -10,15 +10,6 @@ import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import { Link } from '@mui/material';
 
-const newpk = async (event) => {
-  try {
-    window.open('pokedex/new/:id', '_self')
-    }
-  catch(err){
-    alert('Algo deu errado :c' + err)
-  }
- }
-
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -80,7 +71,7 @@ export default function Navbar({ pokemonFilter, id }) {
           </Search>
           </Box>
           <Link to={`/Novo_Pokemon/${id}`}>
-          <Button size="small" color="inherit" onClick={newpk}> <AddIcon/> </Button>
+          <Button size="small" color="inherit"> <AddIcon/></Button>
           </Link>
 
         </Toolbar>

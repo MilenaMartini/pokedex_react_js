@@ -21,14 +21,14 @@ export const Pg_Poke = () => {
      axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
-    const pokemonFilter = (name) => {
+    const pokemonFilter = (id, name) => {
       var filteredPokemons = [];
-      if (name === "") {
+      if (id, name === "") {
         getPokemons();
       }
       for (var i in pokemons) {
         if(pokemons[i].data.name.includes(name)) {
-          filteredPokemons.push(pokemons[i])
+          filteredPokemons.push(pokemons[i]);
         }
       }
       setPokemons(filteredPokemons);

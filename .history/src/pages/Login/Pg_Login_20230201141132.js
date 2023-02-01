@@ -25,7 +25,7 @@ const Login = () => {
     email: yup.string('Digite seu email').email('Coloque um email valido').required('Item necessário'),
     password: yup.string('Digite uma senha').required('É necessário colocar a senha'),
    });
-
+   
     const handleSubmit = async (event) => {
     try {
       window.open('pokedex', '_self')

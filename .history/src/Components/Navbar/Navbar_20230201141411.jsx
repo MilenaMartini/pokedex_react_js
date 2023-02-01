@@ -12,7 +12,7 @@ import { Link } from '@mui/material';
 
 const newpk = async (event) => {
   try {
-    window.open('pokedex/new/:id', '_self')
+    window.open('pokedex/:id', '_self')
     }
   catch(err){
     alert('Algo deu errado :c' + err)

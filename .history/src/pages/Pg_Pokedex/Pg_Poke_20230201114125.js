@@ -4,7 +4,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import PokemonCard from '../../Components/PokemonCard/Pk_Card'
-import { Skeletons } from '../../Components/Skeletons/Skeletons';
 
 export const Pg_Poke = () => {
   const [pokemons, setPokemons] = useState([])
@@ -21,14 +20,14 @@ export const Pg_Poke = () => {
      axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then((res) => setPokemons(res));
     };
 
-    const pokemonFilter = (name) => {
+    const pokemonFilter = (id, name) => {
       var filteredPokemons = [];
-      if (name === "") {
+      if (id, name === "") {
         getPokemons();
       }
       for (var i in pokemons) {
         if(pokemons[i].data.name.includes(name)) {
-          filteredPokemons.push(pokemons[i])
+          filteredPokemons.push(pokemons[i]);
         }
       }
       setPokemons(filteredPokemons);
