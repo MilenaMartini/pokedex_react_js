@@ -1,19 +1,9 @@
 import styles from '../edit_pk/Pk_modulo.css'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import Button from '@mui/material/Button';
-import CatchingPk from '@mui/icons-material/CatchingPokemon';
+
 function Novo_Pokemon() {
     const {id} = useParams()
-
-    // const pk = async (event) => {
-    //   try {
-    //     window.open('pokedex', '_self')
-    //     }
-    //   catch(err){
-    //     alert('Algo deu errado :c' + err)
-    //   }
-    //  }
 
     const [newPk, setNewPk] = useState([])
 
@@ -31,8 +21,7 @@ function Novo_Pokemon() {
     }, [id])
 
   return(
-    <Button size="large"  variant="contained" color="success">
-      <CatchingPk /> Criar</Button>
+    <p>{newPk}</p>
 )}
 
 export default Novo_Pokemon

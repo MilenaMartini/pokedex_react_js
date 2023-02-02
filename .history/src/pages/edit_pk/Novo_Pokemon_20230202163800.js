@@ -31,7 +31,7 @@ function Novo_Pokemon() {
     }, [id])
 
   return(
-    <Button size="large"  variant="contained" color="success">
+    <Button size="small"  variant="contained" color="success">
       <CatchingPk /> Criar</Button>
 )}
 
