@@ -1,10 +1,9 @@
-import {Container,Form} from '../edit_pk/Novo_PkStyles'
+import {Form} from '../edit_pk/Novo_PkStyles'
 import Input from '../../Components/Input/Input'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import CatchingPk from '@mui/icons-material/CatchingPokemon';
-import { Label } from '@mui/icons-material';
 function Novo_Pokemon() {
     const {id} = useParams()
 
@@ -33,21 +32,18 @@ function Novo_Pokemon() {
     }, [id])
 
   return(
-    <Container>
-      <Form>
+    <Form>
 
-        <h1><CatchingPk/> Crie Seu Pokemon <CatchingPk/> </h1>
-        <a>nome</a>
-        <Input
-          name='Nome'
-          type='text'
-          placeholder='Digite o nome do Pokemon'
-         //  componente personalizado
-        />
-       <Button size="large"  variant="contained" color="success" onClick={pk}>
-       <CatchingPk /> Criar</Button>
-       </Form>
-    </Container>
+      <h1><CatchingPk/> Crie Seu Pokemon <CatchingPk/> </h1>
+       <Input
+       name='Nome'
+       placeholder='Digite o nome do Pokemon'
+      //  componente personalizado
+       > <p>nome</p></Input>
+
+    <Button size="large"  variant="contained" color="success" onClick={pk}>
+      <CatchingPk /> Criar</Button>
+      </Form>
 )}
 
 export default Novo_Pokemon

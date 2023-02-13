@@ -1,16 +1,14 @@
-import {Container,Form} from '../edit_pk/Novo_PkStyles'
-import Input from '../../Components/Input/Input'
+import styles from '../edit_pk/Pk_modulo.css'
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import CatchingPk from '@mui/icons-material/CatchingPokemon';
-import { Label } from '@mui/icons-material';
 function Novo_Pokemon() {
     const {id} = useParams()
 
      const pk = async (event) => {
       try {
-         window.close('pokedex/new', '_self')
+         window.close('new/id', '_self')
          }
        catch(err){
          alert('Algo deu errado :c' + err)
@@ -20,7 +18,7 @@ function Novo_Pokemon() {
     const [newPk, setNewPk] = useState([])
 
     useEffect(() => {
-      fetch('http://localhost:3000/pokedex/new', {
+      fetch('http://localhost:5000/Novo_Pokemon/${id}', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -33,21 +31,8 @@ function Novo_Pokemon() {
     }, [id])
 
   return(
-    <Container>
-      <Form>
-
-        <h1><CatchingPk/> Crie Seu Pokemon <CatchingPk/> </h1>
-        <a>nome</a>
-        <Input
-          name='Nome'
-          type='text'
-          placeholder='Digite o nome do Pokemon'
-         //  componente personalizado
-        />
-       <Button size="large"  variant="contained" color="success" onClick={pk}>
-       <CatchingPk /> Criar</Button>
-       </Form>
-    </Container>
+    <Button size="large"  variant="contained" color="success">
+      <CatchingPk /> Criar</Button>
 )}
 
 export default Novo_Pokemon

@@ -11,7 +11,7 @@ export const InputCustomzado = styled.input`
   padding: 16px 20px;
   width: 100%;
 
-    placeholder {
+    input: placeholder {
       color: black;
       font-size: 12px;
       opacity: 0.7;

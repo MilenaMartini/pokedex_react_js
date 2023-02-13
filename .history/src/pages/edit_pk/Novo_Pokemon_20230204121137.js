@@ -42,6 +42,7 @@ function Novo_Pokemon() {
           name='Nome'
           type='text'
           placeholder='Digite o nome do Pokemon'
+          placeholder= black
          //  componente personalizado
         />
        <Button size="large"  variant="contained" color="success" onClick={pk}>

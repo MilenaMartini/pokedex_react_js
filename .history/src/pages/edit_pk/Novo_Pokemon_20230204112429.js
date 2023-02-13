@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Button from '@mui/material/Button';
 import CatchingPk from '@mui/icons-material/CatchingPokemon';
-import { Label } from '@mui/icons-material';
 function Novo_Pokemon() {
     const {id} = useParams()
 
@@ -37,16 +36,15 @@ function Novo_Pokemon() {
       <Form>
 
         <h1><CatchingPk/> Crie Seu Pokemon <CatchingPk/> </h1>
-        <a>nome</a>
         <Input
           name='Nome'
-          type='text'
-          placeholder='Digite o nome do Pokemon'
+         placeholder='Digite o nome do Pokemon'
          //  componente personalizado
         />
+
        <Button size="large"  variant="contained" color="success" onClick={pk}>
        <CatchingPk /> Criar</Button>
-       </Form>
+      </Form>
     </Container>
 )}
 

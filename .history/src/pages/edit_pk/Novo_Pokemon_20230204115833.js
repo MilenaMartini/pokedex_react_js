@@ -37,7 +37,7 @@ function Novo_Pokemon() {
       <Form>
 
         <h1><CatchingPk/> Crie Seu Pokemon <CatchingPk/> </h1>
-        <a>nome</a>
+        <a>nome</a>>
         <Input
           name='Nome'
           type='text'
