@@ -3,7 +3,7 @@ import { Form } from './Styles_Login'
 import Poke from '../Pg_Pokedex/Pg_Poke'
 import "../../styles/styles.css"
 import Image from '../../Components/Images/logooriginalpokemon.png'
-import Input from '../../Components/input/input'
+import Input from '../../Components/Input/Input'
 import Btn from '../../Components/Button/Btn_Login'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 //{} serve para mostra que você está importando algo de dentro do arquivo

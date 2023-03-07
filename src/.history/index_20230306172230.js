@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import GlobalStyle from './styles/global'
+import GlobalStyle from './src/Styles/Global.js'
 import Routering from './Components/Routes/routes'
 import { RecoilRoot } from 'recoil';
 
