@@ -1,3 +1,32 @@
+# Detalhes do projeto
+Esse projeto usa a pokeapi, uma api que retorna os dados dos pokemons. Após passar pelo sistema de login ele mostra os Pokémon listados contendo, em cada card, informações como a imagem, nome, número e tipo de cada pokemon, que pode ser encontrado mais facilmente com o recurso de busca
+
+## Tecnologias Utilizadas
+
+- React Js
+- Mui Material
+- PokeApi
+- Axios
+
+
+## Vídeos Base:
+
+- https://youtu.be/dqMae44pEVk
+- https://youtu.be/cMNOg4mjIVY
+
+# Imagens do projeto
+
+<details>
+    <summary>Clique Aqui</summary>
+    
+![d0ccc9f0-0284-4ec9-a855-c63b9e4ba242](https://user-images.githubusercontent.com/84812552/233455881-9ad4af80-0832-4581-9705-1f1319699cf4.jpg)
+
+![952f090e-01eb-4a76-adec-c031ebe4b5dc](https://user-images.githubusercontent.com/84812552/233455958-4438d0b3-b96a-48db-8df4-fee0461cac8c.jpg)
+
+
+
+</details>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -74,7 +103,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 </details>
     </details>
-
-# *future examples about the project ✨*
-
-
