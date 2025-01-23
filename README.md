@@ -1,7 +1,8 @@
-# Detalhes do projeto
-Esse projeto usa a pokeapi, uma api que retorna os dados dos pokemons. Após passar pelo sistema de login ele mostra os Pokémon listados contendo, em cada card, informações como a imagem, nome, número e tipo de cada pokemon, que pode ser encontrado mais facilmente com o recurso de busca
+# Project Details
 
-## Tecnologias Utilizadas
+This project uses the PokeAPI, an API that returns Pokémon data. After passing through the login system, it displays the listed Pokémon, each card showing details such as the image, name, number, and type of each Pokémon, which can be easily found using the search feature.
+
+## Technologies Used
 
 - React Js
 - Mui Material
@@ -9,15 +10,15 @@ Esse projeto usa a pokeapi, uma api que retorna os dados dos pokemons. Após pas
 - Axios
 
 
-## Vídeos Base:
+## videos that inspired the project:
 
 - https://youtu.be/dqMae44pEVk
 - https://youtu.be/cMNOg4mjIVY
 
-# Imagens do projeto
+# Project images
 
 <details>
-    <summary>Clique Aqui</summary>
+    <summary>Click Here</summary>
     
 ![d0ccc9f0-0284-4ec9-a855-c63b9e4ba242](https://user-images.githubusercontent.com/84812552/233455881-9ad4af80-0832-4581-9705-1f1319699cf4.jpg)
 
